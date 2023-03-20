@@ -1,5 +1,5 @@
 import React from "react";
-import { Folder, Plus } from "react-feather";
+import { Folder, FolderPlus } from "react-feather";
 
 import "./Sidebar.scss";
 
@@ -19,7 +19,7 @@ export default function Sidebar({}: Props) {
           Place board
         </li>
         <li>
-          <Plus />
+          <FolderPlus />
           Create new board
         </li>
       </ul>
