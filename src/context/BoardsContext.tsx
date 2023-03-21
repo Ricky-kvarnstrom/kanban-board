@@ -1,6 +1,18 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-const BoardsContext = createContext<string[]>([]);
+interface Project {
+  name: string;
+}
+
+interface Context {
+  projects: Project[];
+  createProject: (name: string) => void;
+}
+
+const BoardsContext = createContext<Context>({
+  projects: [],
+  createProject: () => {},
+});
 
 export function useBoardContext() {
   return useContext(BoardsContext);
@@ -11,9 +23,18 @@ type Props = {
 };
 
 export default function BoardsContextProvider({ children }: Props) {
-  const projects = ["test", "test 2"];
+  const [projects, setProjects] = useState<Project[]>([
+    { name: "hej" },
+    { name: "då" },
+  ]);
+
+  function createProject(name: string) {
+    setProjects([...projects, { name }]);
+  }
 
   return (
-    <BoardsContext.Provider value={projects}>{children}</BoardsContext.Provider>
+    <BoardsContext.Provider value={{ projects, createProject }}>
+      {children}
+    </BoardsContext.Provider>
   );
 }
