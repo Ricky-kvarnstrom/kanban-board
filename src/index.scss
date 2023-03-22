@@ -25,6 +25,25 @@ body {
   color: var(--text);
 }
 
+.app {
+  padding: 4px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .main-container {
   display: flex;
+  flex: 1;
+}
+
+.btn {
+  background-color: var(--primary);
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
