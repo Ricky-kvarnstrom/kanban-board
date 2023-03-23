@@ -13,7 +13,7 @@ export default function Sidebar({}: Props) {
 
   return (
     <div className="sidebar">
-      <p>ALL BOARDS ( 2 )</p>
+      <p>ALL BOARDS ( {projects.length} )</p>
       <ul className="sidebar-items">
         {projects.map((project, index) => (
           <li

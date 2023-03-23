@@ -12,7 +12,6 @@
     background-color: var(--bg-gray);
     padding: 32px;
     border-radius: 10px;
-    height: 350px;
     width: 100%;
     max-width: 480px;
 
@@ -21,6 +20,57 @@
       top: 10px;
       right: 10px;
       cursor: pointer;
+    }
+
+    .model-title {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      color: var(--text-gray);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      //   display: block;
+      border-radius: 5px;
+      border: solid 1px var(--bg-lines);
+      background-color: var(--bg-lines);
+      color: white;
+      padding: 10px 20px;
+      outline: none;
+      margin-bottom: 6px;
+      resize: vertical;
+      max-height: 140px;
+
+      &:focus {
+        border-color: var(--primary);
+      }
+    }
+    .subtask-container {
+      position: relative;
+
+      svg {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5px;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+      }
+    }
+
+    button {
+      border-radius: 8px;
+      width: 100%;
+      padding: 12px 0px;
+      margin-bottom: 15px;
     }
   }
 }
