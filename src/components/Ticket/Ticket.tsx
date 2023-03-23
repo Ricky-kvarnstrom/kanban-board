@@ -23,7 +23,7 @@ export default function Ticket({ ticket, provided, snapshot }: Props) {
     >
       <h3>{ticket.title}</h3>
       <p>{ticket.description}</p>
-      <p>{ticket.tasks.length}</p>
+      <p>{ticket.tasks.length} subtasks</p>
       {showSubtasks && (
         <ul>
           <li>
